@@ -26,6 +26,15 @@ namespace WpfApp2
             InitializeComponent();
             server = new Server();
             server.Visibility = Visibility.Visible;
+            MainWindow mainWindow2 = new MainWindow(server);
+            MainWindow mainWindow3 = new MainWindow(server);
+            MainWindow mainWindow4 = new MainWindow(server);
+        }
+        public MainWindow(Server server)
+        {
+            InitializeComponent();
+            this.server = server;
+            this.Visibility = Visibility.Visible;
         }
 
         private void Sender_Click(object sender, RoutedEventArgs e)
@@ -35,4 +44,5 @@ namespace WpfApp2
             OutputText.Content += "\nDone";
         }
     }
+
 }
